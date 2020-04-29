@@ -4,14 +4,14 @@
     <id>$id$</id>
     <version>$version$</version>
     <title>$title$</title>
-    <authors>Ken Wilcox</authors>
-    <owners>Ken Wilcox</owners>
+    <authors>Bhuvan Pasham</authors>
+    <owners>appScience</owners>
     <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
-    <projectUrl>https://github.com/kenwilcox/BankFileParsers</projectUrl>
+    <projectUrl>https://github.com/appscience-ai/BankFileParsers</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Utility methods and classes for parsing common bank files</description>
-    <releaseNotes>BAI II parser and translator</releaseNotes>
-    <copyright>Copyright 2015</copyright>
-    <tags>parse bank bai</tags>
+    <description>Utility methods and classes for parsing common bank files - bai2 and btr3 file formats</description>
+    <releaseNotes>BAI II &amp; BTR3 parser and translator</releaseNotes>
+    <copyright>Copyright 2020</copyright>
+    <tags>parse bank bai btrs</tags>
   </metadata>
 </package>

@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E1FEACF8-E6E8-40BF-8D53-5592702AD3A9}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{2E53D9F5-1B95-4590-A4A5-CA5BC9E60997}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BuildTransactionDetail</RootNamespace>
-    <AssemblyName>BuildTransactionDetail</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <RootNamespace>BankFileParsers</RootNamespace>
+    <AssemblyName>BankFileParsers</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -25,13 +24,17 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>none</DebugType>
+    <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -44,22 +47,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Classes\Account.cs" />
+    <Compile Include="Helpers\AccountFundTypeFactory.cs" />
+    <Compile Include="Enums\AsOfDateModifier.cs" />
+    <Compile Include="Classes\BaiAccount.cs" />
+    <Compile Include="Classes\BaiDetail.cs" />
+    <Compile Include="Classes\BaiFile.cs" />
+    <Compile Include="Helpers\BaiFileHelpers.cs" />
+    <Compile Include="Classes\BaiGroup.cs" />
+    <Compile Include="Parsers\BaiParser.cs" />
+    <Compile Include="Parsers\BaiTranslator.cs" />
+    <Compile Include="Enums\CategoryTypeCodes.cs" />
+    <Compile Include="Enums\ContinuationType.cs" />
+    <Compile Include="Classes\Detail.cs" />
+    <Compile Include="Classes\DetailSummary.cs" />
+    <Compile Include="Classes\FundType.cs" />
+    <Compile Include="Helpers\FundTypeHelper.cs" />
+    <Compile Include="Classes\Group.cs" />
+    <Compile Include="Enums\GroupStatus.cs" />
+    <Compile Include="Enums\LevelType.cs" />
+    <Compile Include="Helpers\ListToCsv.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\SummaryHeader.cs" />
+    <Compile Include="Classes\TransactionDetail.cs" />
+    <Compile Include="Helpers\TransactionDetailBuilder.cs" />
+    <Compile Include="Enums\TransactionType.cs" />
+    <Compile Include="Classes\TranslatedBaiFile.cs" />
+    <Compile Include="Classes\Usage.cs" />
+    <Compile Include="Enums\UsageType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BankFileParsers\BankFileParsers.csproj">
-      <Project>{eddbf9c2-933d-4aac-88f6-a6dfe5d7e061}</Project>
-      <Name>BankFileParsers</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>"$(TargetPath)" &gt; out.txt</PostBuildEvent>
-  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

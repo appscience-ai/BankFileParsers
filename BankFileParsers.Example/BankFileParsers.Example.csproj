@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BankFileParsers.Example</RootNamespace>
     <AssemblyName>BankFileParsers.Example</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -51,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BankFileParsers\BankFileParsers.csproj">
-      <Project>{2e53d9f5-1b95-4590-a4a5-ca5bc9e60997}</Project>
+      <Project>{eddbf9c2-933d-4aac-88f6-a6dfe5d7e061}</Project>
       <Name>BankFileParsers</Name>
     </ProjectReference>
   </ItemGroup>
